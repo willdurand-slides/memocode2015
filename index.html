@@ -37,6 +37,12 @@
                     <em class="date">
                         September 22, 2015 <small><i class="fa fa-birthday-cake"></i></small> / MEMOCODE'15
                     </em>
+
+                    <p class="sponsors">
+                        <img src="images/blaisepascal.png" class="no-border" />
+                        <img src="images/limos.png" class="no-border" />
+                        <img src="images/michelin.jpg" class="no-border" />
+                    </p>
                 </section>
 
                 <section data-background="images/chaine-des-puys.jpg"></section>
@@ -71,14 +77,14 @@
                             <br>
 
                             ```
-                            17-Jun-2015 23:29:59.50|17011|MSG_IN  [pid: 1] [nsec: 8] [point: 1] ...
+                            17-Sep-2015 23:29:59.50|17011|MSG_IN  [pid: 1] [nsec: 8] [point: 1] ...
 
-                            17-Jun-2015 23:29:59.61|17021|MSG_OUT [pid: 1] [nsec: 8] [point: 3] ...
+                            17-Sep-2015 23:29:59.61|17021|MSG_OUT [pid: 1] [nsec: 8] [point: 3] ...
 
-                            17-Jun-2015 23:29:59.70|17011|MSG_IN  [pid: 2] [nsec: 8] [point: 2] ...
+                            17-Sep-2015 23:29:59.70|17011|MSG_IN  [pid: 2] [nsec: 8] [point: 2] ...
                             ```
 
-                            <small>A simple example of 3 messages in a human readable format</small>
+                            <small>A simple example of 3 messages in a human readable format.</small>
                         </script>
                     </section>
                     <section data-markdown>
@@ -140,7 +146,7 @@
                             <br>But writing such models would be **complicated** and **error prone**.
 
                             <br>
-                            <i class="fa fa-info-circle"></i> Not suitable for Michelin applications
+                            <i class="fa fa-info-circle"></i> Not suitable for Michelin applications.
                         </script>
                     </section>
                     <section data-markdown>
@@ -188,6 +194,13 @@
                         <script type="text/template">
                             ### 1. Model Inference
 
+                            // TODO
+                        </script>
+                    </section>
+                    <section data-markdown class="no-border no-img-margin">
+                        <script type="text/template">
+                            ### Model Reduction
+
                             ![](images/STS1.png)
 
                             <i class="fa fa-arrow-down"></i>
@@ -204,7 +217,7 @@
                     </section>
                     <section data-markdown class="no-border centered-table">
                         <script type="text/template">
-                            ### Experimentation
+                            ### Model Inference Experimentation
                             <br>
 
                             10 million production messages (20 days)
@@ -221,7 +234,7 @@
                             | 43,536 branches | 1,585 branches |
 
                             <br>
-                            <small><i class="fa fa-info-circle"></i> It took 5 minutes to build the two models.</small>
+                            <small><i class="fa fa-info-circle"></i> It took 6 minutes to build the two models.</small>
                         </script>
                     </section>
                     <section>
@@ -283,9 +296,8 @@
                             <br>
 
                             * Larger sets of traces to build the models should
-                            reduce the number of false positives
-                            * We should find a way to refine this **possibly fail**
-                            trace set
+                            reduce the number of false positive
+                            * We should find a way to refine this **possibly fail** trace set
                         </script>
                     </section>
                </section>
@@ -297,7 +309,8 @@
                             <br>
 
                             * **Fast** passive testing framework for a specific context
-                            * The more production messages, the better!
+                            * Model inference: the more production messages, the better!
+                            * Testing: still too many possibly fail traces
                         </script>
                     </section>
                 </section>
@@ -309,7 +322,7 @@
 
                         * **Online** passive testing (just-in-time fault detection?)
                         * Active testing by leveraging the inferred models again
-                        * Adding a way to focus on specific parts of the<br>production system
+                        * Adding a way to focus on specific parts of the system
                     </script>
                 </section>
 
@@ -318,12 +331,6 @@
                         ## Thank You.
 
                         ### Questions?
-
-                        <p class="sponsors">
-                            <img src="images/blaisepascal.png" class="no-border" />
-                            <img src="images/limos.png" class="no-border" />
-                            <img src="images/michelin.jpg" class="no-border" />
-                        </p>
                     </script>
                 </section>
             </div>
