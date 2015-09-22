@@ -190,14 +190,28 @@
                             ![](images/autofunk_branded.png)
                         </script>
                     </section>
-                    <section data-markdown class="no-border no-img-margin">
+                    <section data-markdown class="no-border">
                         <script type="text/template">
-                            ### 1. Model Inference
+                            ### Model Inference
+                            <br>
 
-                            // TODO
+                            1. We **collect** production system traces (monitoring)
+                            2. We **segment** these traces to create different complete<br>trace sets
+                            (outlier detection approach)
+                            3. We **build** (rather large) STS models from these sets
+                            4. We **reduce** the models to obtain "usable" models
+
+                            <br>
+
+                            <p class="citation">
+                                Durand, W., & Salva, S. (2015). Autofunk: An
+                                Inference-Based Formal Model Generation Framework for
+                                Production Systems. In FM 2015: Formal Methods (pp.
+                                577-580). Springer International Publishing.
+                            </p>
                         </script>
                     </section>
-                    <section data-markdown class="no-border no-img-margin">
+                    <section data-markdown class="no-border">
                         <script type="text/template">
                             ### Model Reduction
 
@@ -206,13 +220,6 @@
                             <i class="fa fa-arrow-down"></i>
 
                             ![](images/STS2.png)
-
-                            <p class="citation">
-                                Durand, W., & Salva, S. (2015). Autofunk: An
-                                Inference-Based Formal Model Generation Framework for
-                                Production Systems. In FM 2015: Formal Methods (pp.
-                                577-580). Springer International Publishing.
-                            </p>
                         </script>
                     </section>
                     <section data-markdown class="no-border centered-table">
@@ -238,19 +245,21 @@
                         </script>
                     </section>
                     <section>
-                        <h3>In Depth Autofunk</h3>
+                        <h3>In Depth Testing</h3>
                         <p>
                             <img src="images/overall_autofunk.png" class="no-border" />
                         </p>
                     </section>
                     <section data-markdown class="no-border">
                         <script type="text/template">
-                            ### 2. Offline Passive Testing
+                            ### Offline Passive Testing
                             <br>
 
                             * Two **implementation relations**:
                                 - **Trace preorder** relation
                                 - and our own **weaker** implementation relation
+
+                                <br>
                             * Our testing algorithm relies on both to give verdicts
 
                             <br>
@@ -272,8 +281,9 @@
                             ### Experimentation
                             <br>
 
-                            * `SUA`: 53,996 traces
-                            * `SUT`: 25,047 traces
+                            `SUA`: 53,996 traces
+                            <br>
+                            `SUT`: 25,047 traces
 
                             <br>
                             <i class="fa fa-arrow-down"></i>
@@ -291,13 +301,13 @@
                             <br>
 
                             **2%** still represents many traces, and can contain many false positive.
-                            For Michelin engineers, it is still _better than nothing_.
+                            For Michelin engineers, it is still _"better than nothing"_.
 
                             <br>
 
-                            * Larger sets of traces to build the models should
+                            * **Larger sets** of traces to build the models should
                             reduce the number of false positive
-                            * We should find a way to refine this **possibly fail** trace set
+                            * But we should find a way to refine this **possibly fail** trace set
                         </script>
                     </section>
                </section>
@@ -321,8 +331,8 @@
                         <br>
 
                         * **Online** passive testing (just-in-time fault detection?)
-                        * Active testing by leveraging the inferred models again
-                        * Adding a way to focus on specific parts of the system
+                        * **Active testing** by leveraging the inferred models again
+                        * Developing a way to focus on specific parts of the system
                     </script>
                 </section>
 
